@@ -1,0 +1,240 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    text-align: left;
+}
+
+/* ===========================
+        Navbar Animation
+=========================== */
+
+/* ظهور النافبار */
+.navbar{
+    opacity: 0;
+    animation: fadeDown .7s ease forwards;
+}
+
+/* ظهور عناصر القائمة بالتتابع */
+.navbar-nav .nav-item{
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeDown .5s ease forwards;
+}
+
+.navbar-nav .nav-item:nth-child(1){
+    animation-delay: .5s;
+}
+
+.navbar-nav .nav-item:nth-child(2){
+    animation-delay: .7s;
+}
+
+.navbar-nav .nav-item:nth-child(3){
+    animation-delay: .9s;
+}
+
+.navbar-nav .nav-item:nth-child(4){
+    animation-delay: 1.1s;
+}
+
+.navbar-nav .nav-item:nth-child(5){
+    animation-delay: 1.3s;
+}
+
+.navbar-nav .nav-item:nth-child(6){
+    animation-delay: 1.5s;
+}
+
+.navbar-nav .nav-item:nth-child(7){
+    animation-delay: 1.7s;
+}
+
+/* زر Login */
+.navbar .btn{
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeDown .5s ease forwards;
+    animation-delay: 1.9s;
+}
+
+/* حركة النزول */
+@keyframes fadeDown{
+
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Hover */
+.navbar-nav .nav-link:hover{
+    color: #0d6efd !important;
+}
+
+
+/* ===========================
+        Navbar Animation
+=========================== */
+
+/* ظهور النافبار */
+.navbar{
+    opacity: 0;
+    animation: fadeDown .4s ease forwards;
+}
+
+/* ظهور عناصر القائمة بالتتابع */
+.navbar-nav .nav-item{
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeDown .35s ease forwards;
+}
+
+.navbar-nav .nav-item:nth-child(1){
+    animation-delay: .15s;
+}
+
+.navbar-nav .nav-item:nth-child(2){
+    animation-delay: .25s;
+}
+
+.navbar-nav .nav-item:nth-child(3){
+    animation-delay: .35s;
+}
+
+.navbar-nav .nav-item:nth-child(4){
+    animation-delay: .45s;
+}
+
+.navbar-nav .nav-item:nth-child(5){
+    animation-delay: .55s;
+}
+
+.navbar-nav .nav-item:nth-child(6){
+    animation-delay: .65s;
+}
+
+.navbar-nav .nav-item:nth-child(7){
+    animation-delay: .75s;
+}
+
+/* زر Login */
+.navbar .btn{
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeDown .35s ease forwards;
+    animation-delay: .9s;
+}
+
+/* حركة النافبار */
+@keyframes fadeDown{
+
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Hover */
+.navbar-nav .nav-link:hover{
+    color: #0d6efd !important;
+}
+
+
+/* ===========================
+        Hero Animation
+=========================== */
+
+/* الصورة */
+.hero-section .col-lg-6.position-absolute{
+    opacity: 0;
+    transform: scale(1.08);
+    animation: heroImage .8s ease forwards;
+    animation-delay: 1.4s;
+}
+
+/* الكلام */
+.hero-section .z-index-2{
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: heroContent .6s ease forwards;
+    animation-delay: 2s;
+}
+
+/* حركة الصورة */
+@keyframes heroImage{
+    from{
+        opacity: 0;
+        transform: scale(1.08);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* حركة الكلام */
+@keyframes heroContent{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Footer link hover effect */
+.hover-text-white:hover {
+    color: #ffffff !important;
+}
+
+/* Utility shadow and border rounding */
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.04) !important;
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    transition: .3s;
+    z-index: 999;
+}
+
+.back-to-top:hover{
+    background-color: #0b5ed7;
+    color: #fff;
+    transform: translateY(-5px);
+}

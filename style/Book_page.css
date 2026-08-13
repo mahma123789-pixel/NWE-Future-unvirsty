@@ -1,0 +1,430 @@
+/* ===========================
+   Booking Header
+=========================== */
+
+.booking-header {
+    background: linear-gradient(135deg, #0b5ed7, #0d6efd);
+    color: #ffffff;
+    padding: 85px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative effect */
+.booking-header::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -150px;
+    left: -100px;
+}
+
+.booking-header::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    bottom: -130px;
+    right: -80px;
+}
+
+.booking-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.booking-header h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.booking-header p {
+    font-size: 19px;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .booking-header {
+        padding: 65px 20px;
+    }
+
+    .booking-header h1 {
+        font-size: 34px;
+    }
+
+    .booking-header p {
+        font-size: 17px;
+    }
+}
+
+
+
+/* =========================
+   Booking Cards
+========================= */
+
+.booking-card,
+.info-card{
+    border-radius:20px;
+    background:#fff;
+    transition:.3s ease;
+}
+
+
+.booking-card:hover,
+.info-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+
+
+/* =========================
+   Icon Box
+========================= */
+
+.icon-box{
+    width:70px;
+    height:70px;
+    background:#e7f1ff;
+    color:#0d6efd;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+
+
+/* =========================
+   Form
+========================= */
+
+.form-label{
+    font-weight:600;
+    color:#333;
+}
+
+
+.form-label span{
+    font-size:13px;
+}
+
+
+.input-group-text{
+    background:#e7f1ff;
+    color:#0d6efd;
+    border:none;
+}
+
+
+.form-control,
+.form-select{
+    padding:12px;
+    border-radius:10px;
+}
+
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#0d6efd;
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+
+}
+
+
+
+/* =========================
+   Continue Button
+========================= */
+
+.continue-btn{
+
+    background:#0d6efd;
+    color:white;
+    padding:13px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+
+.continue-btn:hover{
+
+    background:#084298;
+    color:white;
+    transform:translateY(-3px);
+
+}
+
+
+
+/* =========================
+   Info Card
+========================= */
+
+.info-card{
+
+    background:linear-gradient(145deg,#0d6efd,#0b5ed7);
+    color:white;
+
+}
+
+
+.info-card .text-muted{
+
+    color:rgba(255,255,255,.75)!important;
+
+}
+
+
+.info-icon{
+
+    font-size:55px;
+    color:white;
+
+}
+
+
+
+/* =========================
+   Notice Items
+========================= */
+
+.notice-item{
+
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+}
+
+
+.notice-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+.notice-item i{
+
+    background:white;
+    color:#0d6efd;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.notice-item p{
+
+    margin:0;
+    line-height:1.7;
+    font-size:15px;
+
+}
+
+
+/* =========================
+   Page Entrance Animation
+========================= */
+
+
+.booking-header {
+    opacity: 0;
+
+    animation: headerShow 0.9s ease forwards;
+
+    animation-delay: 0.2s;
+}
+
+
+/* Header Title */
+
+.booking-header h1 {
+    opacity: 0;
+
+    animation: headerTextShow 0.7s ease forwards;
+
+    animation-delay: 0.6s;
+}
+
+
+/* Header Paragraph */
+
+.booking-header p {
+    opacity: 0;
+
+    animation: headerTextShow 0.7s ease forwards;
+
+    animation-delay: 0.9s;
+}
+
+
+
+/* =========================
+   Left Card
+   Student Verification
+========================= */
+
+.booking-card {
+
+    opacity: 0;
+
+    animation: cardLeftShow 0.8s ease forwards;
+
+    animation-delay: 1.6s;
+}
+
+
+
+/* =========================
+   Right Card
+   Booking Guidelines
+========================= */
+
+.info-card {
+
+    opacity: 0;
+
+    animation: cardRightShow 0.8s ease forwards;
+
+    animation-delay: 2.1s;
+}
+
+
+
+/* =========================
+   Header Animation
+========================= */
+
+@keyframes headerShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================
+   Header Text Animation
+========================= */
+
+@keyframes headerTextShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================
+   Left Card Animation
+========================= */
+
+@keyframes cardLeftShow {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/* =========================
+   Right Card Animation
+========================= */
+
+@keyframes cardRightShow {
+
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    transition: .3s;
+    z-index: 999;
+}
+
+.back-to-top:hover{
+    background-color: #0b5ed7;
+    color: #fff;
+    transform: translateY(-5px);
+}
